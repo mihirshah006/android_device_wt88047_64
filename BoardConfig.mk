@@ -102,7 +102,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
-BOARD_EGL_CFG := device/wt88047_64/egl.cfg
+BOARD_EGL_CFG := device/xiaomi/wt88047_64/egl.cfg
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES := true
