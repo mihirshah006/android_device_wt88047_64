@@ -71,9 +71,9 @@ TARGET_USES_CSVT := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT := true
 
-BOARD_SECCOMP_POLICY := device/wt88047_64/seccomp
+BOARD_SECCOMP_POLICY := device/xiaomi/wt88047_64/seccomp
 
-BOARD_CUSTOM_BOOTIMG_MK  := device/wt88047_64/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK  := device/xiaomi/wt88047_64/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS     := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_DTBTOOL_ARGS       := -2
 
@@ -111,7 +111,7 @@ TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
 TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # init
-TARGET_LIBINIT_DEFINES_FILE := device/wt88047_64/init/init_wt88047.cpp
+TARGET_LIBINIT_DEFINES_FILE := device/xiaomi/wt88047_64/init/init_wt88047.cpp
 TARGET_UNIFIED_DEVICE := true
 
 #add suffix variable to uniquely identify the board
@@ -139,7 +139,7 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/wt88047_64/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/xiaomi/wt88047_64/fstab.qcom
 
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := false
