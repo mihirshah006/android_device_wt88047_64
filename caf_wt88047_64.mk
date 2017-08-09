@@ -7,9 +7,13 @@ $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from wt88047 device
-$(call inherit-product, device/wt88047_64/msm8916_64.mk)
+$(call inherit-product, device/xiaomi/wt88047_64/msm8916_64.mk)
 
-PRODUCT_NAME := caf_wt88047_64
+# Inherit some common Validus stuff.
+$(call inherit-product, vendor/validus/config/common_full_phone.mk)
+$(call inherit-product, vendor/validus/config/caf_fw.mk)
+
+PRODUCT_NAME := validus_wt88047_64
 PRODUCT_DEVICE := wt88047_64
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := wt88047_64
