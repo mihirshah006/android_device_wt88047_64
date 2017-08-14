@@ -27,4 +27,4 @@
 #  IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-add_lunch_combo validus_wt88047_64-userdebug
+add_lunch_combo candy_wt88047_64-userdebug

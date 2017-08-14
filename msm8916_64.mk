@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS := device/wt88047_64/overlay
+DEVICE_PACKAGE_OVERLAYS := device/xiaomi/wt88047_64/overlay
 
 TARGET_USES_QCOM_BSP := true
 # Add QC Video Enhancements flag
@@ -16,17 +16,17 @@ PRODUCT_PACKAGES += \
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/configs/apns-conf.xml:system/etc/apns-conf.xml
+    device/xiaomi/wt88047_64/configs/apns-conf.xml:system/etc/apns-conf.xml
 
 # Selective SPN list for operator number who has the problem.
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/configs/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+    device/xiaomi/wt88047_64/configs/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
 # media_profiles and media_codecs xmls for redmi2
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/wt88047_64/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
-                      device/wt88047_64/media/media_codecs_performance_8916_64.xml:system/etc/media_codecs_performance.xml \
-                      device/wt88047_64/media/media_codecs_8916.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/xiaomi/wt88047_64/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
+                      device/xiaomi/wt88047_64/media/media_codecs_performance_8916_64.xml:system/etc/media_codecs_performance.xml \
+                      device/xiaomi/wt88047_64/media/media_codecs_8916.xml:system/etc/media_codecs.xml
 endif
 
 TARGET_USES_NQ_NFC := false
@@ -56,9 +56,9 @@ PRODUCT_PACKAGES += \
     gps.msm8916
     
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/configs/flp.conf:system/etc/flp.conf \
-    device/wt88047_64/configs/quipc.conf:system/etc/quipc.conf \
-    device/wt88047_64/configs/sap.conf:system/etc/sap.conf
+    device/xiaomi/wt88047_64/configs/flp.conf:system/etc/flp.conf \
+    device/xiaomi/wt88047_64/configs/quipc.conf:system/etc/quipc.conf \
+    device/xiaomi/wt88047_64/configs/sap.conf:system/etc/sap.conf
 
 #PRODUCT_BOOT_JARS += vcard
 PRODUCT_BOOT_JARS += tcmiface
@@ -93,27 +93,27 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration od AOSP
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/audio/acdb/QRD_Bluetooth_cal.acdb:system/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
-    device/wt88047_64/audio/acdb/QRD_General_cal.acdb:system/etc/acdbdata/QRD/QRD_General_cal.acdb \
-    device/wt88047_64/audio/acdb/QRD_Global_cal.acdb:system/etc/acdbdata/QRD/QRD_Global_cal.acdb \
-    device/wt88047_64/audio/acdb/QRD_Handset_cal.acdb:system/etc/acdbdata/QRD/QRD_Handset_cal.acdb \
-    device/wt88047_64/audio/acdb/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
-    device/wt88047_64/audio/acdb/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
-    device/wt88047_64/audio/acdb/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
-    device/wt88047_64/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    device/wt88047_64/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    device/wt88047_64/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    device/wt88047_64/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/wt88047_64/audio/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml
+    device/xiaomi/wt88047_64/audio/acdb/QRD_Bluetooth_cal.acdb:system/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
+    device/xiaomi/wt88047_64/audio/acdb/QRD_General_cal.acdb:system/etc/acdbdata/QRD/QRD_General_cal.acdb \
+    device/xiaomi/wt88047_64/audio/acdb/QRD_Global_cal.acdb:system/etc/acdbdata/QRD/QRD_Global_cal.acdb \
+    device/xiaomi/wt88047_64/audio/acdb/QRD_Handset_cal.acdb:system/etc/acdbdata/QRD/QRD_Handset_cal.acdb \
+    device/xiaomi/wt88047_64/audio/acdb/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
+    device/xiaomi/wt88047_64/audio/acdb/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
+    device/xiaomi/wt88047_64/audio/acdb/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
+    device/xiaomi/wt88047_64/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/xiaomi/wt88047_64/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/xiaomi/wt88047_64/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/xiaomi/wt88047_64/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/xiaomi/wt88047_64/audio/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml
 
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/msm8916_64/msm8916_64.mk
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/wt88047_64/keylayout/msm8x16-wt88047-snd-card_Button_Jack.kl:system/usr/keylayout/msm8x16-wt88047-snd-card_Button_Jack.kl \
-    device/wt88047_64/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl
+    device/xiaomi/wt88047_64/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/xiaomi/wt88047_64/keylayout/msm8x16-wt88047-snd-card_Button_Jack.kl:system/usr/keylayout/msm8x16-wt88047-snd-card_Button_Jack.kl \
+    device/xiaomi/wt88047_64/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -162,13 +162,13 @@ PRODUCT_PACKAGES += wcnss_service
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+    device/xiaomi/wt88047_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 #wlan driver
 PRODUCT_COPY_FILES += \
-    device/wt88047_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/wt88047_64/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
-    device/wt88047_64/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+    device/xiaomi/wt88047_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/xiaomi/wt88047_64/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
+    device/xiaomi/wt88047_64/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
